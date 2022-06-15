@@ -18,7 +18,7 @@ export default function EventItem({ evt }) {
         <span>
           {new Date(evt.attributes.date).toLocaleDateString('en-US')} in {evt.attributes.venue}
         </span>
-        <h3>{evt.name}</h3>
+        <h3>{evt.attributes.name}</h3>
       </div>
 
       <div className={styles.link}>
