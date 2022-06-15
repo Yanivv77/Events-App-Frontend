@@ -31,7 +31,7 @@ export default function EventPage({ evt }) {
         {evt.attributes.image && (
           <div className={styles.image}>
             {console.log(evt.attributes.image.data.attributes.formats.medium.url)}
-            <Image src={evt.attributes.image.data.attributes.formats.medium.url} width={960} height={600} />
+            <Image src={evt.attributes.image.data.attributes.formats.medium.url} width={960} height={600} alt="" />
           </div>
         )}
 
