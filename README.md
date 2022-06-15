@@ -1,4 +1,7 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+Backend  [https://github.com/Yanivv77/My-events-app-backend](https://github.com/Yanivv77/My-events-app-backend)
+
+
 
 ## Getting Started
 
