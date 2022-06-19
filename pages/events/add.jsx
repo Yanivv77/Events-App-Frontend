@@ -25,6 +25,7 @@ export default function AddEventPage() {
 
     // Validation
     const hasEmptyFields = Object.values(values).some((element) => element === '')
+    console.log(Object.values(values))
 
     if (hasEmptyFields) {
       toast.error('Please fill in all fields')
@@ -34,15 +35,29 @@ export default function AddEventPage() {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Content-Length': 20000,
       },
-      body: JSON.stringify(values),
+      body: JSON.stringify({
+        data: {
+          name: values.name,
+          performers: values.performers,
+          venue: values.venue,
+          address: values.address,
+          date: values.date,
+          time: values.time,
+          description: values.description,
+        },
+      }),
     })
 
+    console.log(res)
     if (!res.ok) {
       toast.error('Something Went Wrong')
+      console.log(res.body)
     } else {
       const evt = await res.json()
-      router.push(`/api/events/${evt.slug}`)
+      console.log(evt)
+      router.push(`/api/events/${evt.data.attributes.slug}`)
     }
   }
 
